@@ -5,7 +5,7 @@ ENV M2_HOME=/usr/lib/mvn
 ENV M2=$M2_HOME/bin
 ENV PATH $PATH:$M2_HOME:$M2
 
-WORKDIR /app
+WORKDIR /appz
 COPY . .
 
 RUN apk --update upgrade && \
