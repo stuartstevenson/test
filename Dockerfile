@@ -5,7 +5,7 @@ ENV M2_HOME=/usr/lib/mvn
 ENV M2=$M2_HOME/bin
 ENV PATH $PATH:$M2_HOME:$M2
 
-WORKDIR /appz
+WORKDIR /app
 COPY . .
 
 RUN apk --update upgrade && \
@@ -22,4 +22,4 @@ RUN apk --update upgrade && \
     rm -rf target && \
     apk del curl openjdk8
 
-CMD java -jar app.jar --server.port=$PORT
+CMD java -jar app1.jar --server.port=$PORT
